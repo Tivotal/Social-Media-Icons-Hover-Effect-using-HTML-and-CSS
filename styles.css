@@ -1,0 +1,95 @@
+/* Created by Tivotal */
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons li {
+  position: relative;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.icons li a {
+  color: #222;
+  font-size: 5rem;
+}
+
+.icons li a::before {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  font-size: 5rem;
+  transition: 0.6s ease-out;
+  font-family: "FontAwesome";
+}
+
+.icons li:hover a::before {
+  height: 100%;
+}
+
+.icons li:nth-child(1) a::before {
+  content: "\f099";
+  color: #1da1f2;
+}
+
+.icons li:nth-child(2) a::before {
+  content: "\f232";
+  color: #25d366;
+}
+
+.icons li:nth-child(3) a::before {
+  content: "\f2ab";
+  color: #fffc00;
+}
+
+.icons li:nth-child(4) a::before {
+  content: "\f082";
+  color: #4267b2;
+}
+
+.icons li a .line {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: 0.6s ease-out;
+}
+
+.icons li:nth-child(1) a .line {
+  border-bottom: 4px solid #1da1f2;
+}
+
+.icons li:nth-child(2) a .line {
+  border-bottom: 4px solid #25d366;
+}
+
+.icons li:nth-child(3) a .line {
+  border-bottom: 4px solid #fffc00;
+}
+
+.icons li:nth-child(4) a .line {
+  border-bottom: 4px solid #4267b2;
+}
+
+.icons li:hover a .line {
+  transform: translateY(84px);
+}
